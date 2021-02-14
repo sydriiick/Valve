@@ -25,14 +25,12 @@ SECRET_KEY = '%97ro%+&&br)85d&pkwdo_sukbmkjb0(+eyp(0rqq99w($4@%$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.18.9"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'api',
-    'frontend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'api',
+    'frontend',
 ]
 
 MIDDLEWARE = [
@@ -114,7 +114,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

@@ -1,0 +1,13 @@
+{% if two_list %}
+{% for two in two_list %}
+    {% if two.data < s2.minimum or two.data > s2.maximum %}
+        <tr role="row" style="background-color:#fd6233;" >
+    {% else %}
+        <tr role="row">
+    {% endif %}
+            <td>{{ two.id}}</td>
+            <td>{{ two.data }}</td>
+            <td>{{ two.date_created|date:'m-d-Y H:i a' }}</td>
+        </tr>
+{% endfor%}
+{% endif %}

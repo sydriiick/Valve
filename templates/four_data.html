@@ -1,0 +1,13 @@
+{% if four_list %}
+{% for four in four_list %}
+    {% if four.data < s4.minimum or four.data > s4.maximum %}
+        <tr role="row" style="background-color:#fd6233;" >
+    {% else %}
+        <tr role="row">
+    {% endif %}
+            <td>{{ four.id}}</td>
+            <td>{{ four.data }}</td>
+            <td>{{ four.date_created|date:'m-d-Y H:i a' }}</td>
+        </tr>
+{% endfor%}
+{% endif %}

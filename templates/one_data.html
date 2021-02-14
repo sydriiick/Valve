@@ -1,0 +1,15 @@
+{% if one_list %}
+{% for one in one_list %}
+    {% if one.data_1 < s1.minimum or one.data_1 > s1.maximum %}
+        <tr role="row" style="background-color:#fd6233;" >
+    {% else %}
+        <tr role="row">
+    {% endif %}
+            <td>{{ one.id}}</td>
+            <td>{{ one.data_1 }}</td>
+            <td>{{ one.data_2 }}</td>
+            <td>{{ one.data_3 }}</td>
+            <td>{{ one.date_created|date:'m-d-Y H:i a' }}</td>
+        </tr>
+{% endfor%}
+{% endif %}

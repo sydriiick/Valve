@@ -1,0 +1,13 @@
+{% if five_list %}
+{% for five in five_list %}
+    {% if five.data < s5.minimum or five.data_1 > s5.maximum %}
+        <tr role="row" style="background-color:#fd6233;" >
+    {% else %}
+        <tr role="row">
+    {% endif %}
+            <td>{{ five.id}}</td>
+            <td>{{ five.data }}</td>
+            <td>{{ five.date_created|date:'m-d-Y H:i a' }}</td>
+        </tr>
+{% endfor%}
+{% endif %}

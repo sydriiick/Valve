@@ -1,0 +1,13 @@
+{% if six_list %}
+{% for six in six_list %}
+    {% if six.data < s6.minimum or six.data_1 > s6.maximum %}
+        <tr role="row" style="background-color:#fd6233;" >
+    {% else %}
+        <tr role="row">
+    {% endif %}
+            <td>{{ six.id}}</td>
+            <td>{{ six.data }}</td>
+            <td>{{ six.date_created|date:'m-d-Y H:i a' }}</td>
+        </tr>
+{% endfor%}
+{% endif %}
